@@ -662,3 +662,143 @@ a {
     font-style: italic;
     color: #fff;
 }
+
+
+
+.stop-watch {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(78, 0, 40);
+}
+
+
+.stop-watch-header {
+    display: flex;
+    align-items: center;
+
+    height: 70px;
+
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.stop-watch-header h1 {
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.stop-watch-header i {
+    font-family: sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+    color: #fff;
+
+    display: inline-block;
+}
+
+.stop-watch-header i:hover {
+    transform: scale(1.2) rotate(360deg);
+    color: darkred;
+}
+
+#stop-watch-closebtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.stop-watch .stop-watch-body {
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.stop-watch .stop-watch-body .stop-watch-box{
+    width: 30vw;
+    /* background-color: antiquewhite; */
+    padding: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+}
+
+.stop-watch .stop-watch-body .stop-watch-box .stop-watch-top{
+    width: 100%;
+    height: 60%;
+
+}
+
+.stop-watch .stop-watch-body .stop-watch-box .stop-watch-top .stop-watch-screen{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.stop-watch .stop-watch-body .stop-watch-box .stop-watch-top .stop-watch-screen h5{
+    font-size: 20px;
+    font-family: sans-serif;
+
+}
+
+.stop-watch .stop-watch-body .stop-watch-box .stop-watch-top .stop-watch-screen span{
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.stop-watch .stop-watch-body .stop-watch-box .stop-watch-bottom{
+    width: 100%;
+    height: 40%;
+  
+}
+
+.stop-watch .stop-watch-body .stop-watch-box .stop-watch-bottom .stop-watch-buttons{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.pause-btn {
+    background: #c2af00;
+    color: white;
+}
+
+.pause-btn::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(96, 88, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all ease .3s;
+
+
+}
+
+.pause-btn:hover::after {
+    width: 100%;
+
+}
